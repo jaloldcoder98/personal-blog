@@ -1,9 +1,11 @@
+// app/blog/page.tsx
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 
-export default function BlogPage() {
+// Statik ma'lumotni olish uchun getStaticProps
+export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), "posts");
   const filenames = fs.readdirSync(postsDirectory);
   const posts = filenames.map((filename) => {
@@ -18,6 +20,14 @@ export default function BlogPage() {
     };
   });
 
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+const BlogPage = ({ posts }: { posts: { slug: string; title: string; date: string }[] }) => {
   return (
     <div className="max-w-2xl mx-auto py-8 px-4 space-y-6">
       <h1 className="text-3xl font-bold">Mening Blogim</h1>
@@ -35,4 +45,6 @@ export default function BlogPage() {
       </ul>
     </div>
   );
-}
+};
+
+export default BlogPage;
