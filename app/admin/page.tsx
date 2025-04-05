@@ -1,11 +1,12 @@
 // app/admin/page.tsx
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from '../../node_modules/react';
+import { useRouter } from '../../node_modules/next/navigation';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+
 
 export default function AdminPage() {
   const [title, setTitle] = useState('');

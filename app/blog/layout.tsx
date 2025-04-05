@@ -1,5 +1,5 @@
 // app/blog/layout.tsx
-import React from 'react';
+import  React from './../../node_modules/react';
 
 const BlogLayout = ({ children }: { children: React.ReactNode }) => {
   return (

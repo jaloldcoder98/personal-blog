@@ -1,7 +1,7 @@
 // app/blog/page.tsx
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import * as fs from "fs";
+import * as path from "path";
+import * as matter from "gray-matter";
 import Link from "next/link";
 
 // Statik ma'lumotni olish uchun getStaticProps

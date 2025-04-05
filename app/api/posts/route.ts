@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { NextResponse } from './../../../node_modules/next/server';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export async function POST(request: Request) {
   try {

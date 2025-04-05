@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import * as fs from "fs";
+import * as path from "path";
+import * as matter from "gray-matter";
 import { marked } from "marked";
 
 export default function PostPage({ params }: { params: { slug: string } }) {

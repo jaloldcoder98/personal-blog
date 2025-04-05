@@ -1,35 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./app/*"],
+      "@components/*": ["./app/components/*"],
+      "@hooks/*": ["./app/hooks/*"],
+      "@utils/*": ["./app/utils/*"],
+      "@assets/*": ["./app/assets/*"],
+      "@screens/*": ["./app/screens/*"],
+      "@store/*": ["./app/store/*"],
+      "@navigation/*": ["./app/navigation/*"],
+      "@constants/*": ["./app/constants/*"],
+      "@types/*": ["./app/types/*"],
+      "@styles/*": ["./app/styles/*"],
+      "@config/*": ["./app/config/*"],
+      "@services/*": ["./app/services/*"],
+      "@mocks/*": ["./app/mocks/*"],
+      "@api/*": ["./app/api/*"],
+      "@localization/*": ["./app/localization/*"]
+      
+    }
+  }
 }
